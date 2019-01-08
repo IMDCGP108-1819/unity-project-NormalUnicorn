@@ -1,9 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class movement : MonoBehaviour {
-
+	public float movement_speed;
+	public bool direction;
 	// Use this for initialization
 	void Start () {
 
@@ -11,6 +12,10 @@ public class movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		transform.position += new Vector3(0.01f, 0f);
+		if (direction) {
+			transform.position += new Vector3(movement_speed*Time.deltaTime, 0f);
+		} else {
+			transform.position -= new Vector3(movement_speed*Time.deltaTime, 0f);
+		}
 	}
 }
