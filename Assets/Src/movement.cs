@@ -12,6 +12,7 @@ public class movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		// if direction = true, moves to the left 
 		if (direction) {
 			transform.position += new Vector3(movement_speed*Time.deltaTime, 0f);
 		} else {
