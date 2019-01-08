@@ -10,7 +10,7 @@ public class bob_spawning : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spawnArea();
+
 	}
 
 	// Update is called once per frame
