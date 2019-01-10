@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scoring : MonoBehaviour
+public class lives : MonoBehaviour
 {
-    public int score;
-    public Text displayed_score;
-    public Text final_score;
+      public int lives_counter;
+      public Text diplayed_lives;
     // Start is called before the first frame update
     void Start()
     {
-
+       lives_counter = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-          displayed_score.text =  "score: " + score;
-          final_score.text = "score: " + score;
+          diplayed_lives.text = "Lives:" + lives_counter;
     }
 }

@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class beam_movement : MonoBehaviour {
     public float movement_speed;
     public Rigidbody2D RigidBody2D;
     public GameObject score;
+    public GameObject lives;
+    public GameObject end_pannel;
     // Start is called before the first frame update
     void Start()
     {
+          lives = GameObject.Find("Lives");
           RigidBody2D = this.GetComponent<Rigidbody2D>();
           score = GameObject.Find("score");
     }
@@ -32,6 +36,12 @@ public class beam_movement : MonoBehaviour {
                other.gameObject.SetActive(false);
                other.gameObject.SetActive(false);
                score.GetComponent<scoring>().score += 5;
+         } else if (other.gameObject.tag == "boundry") {
+               this.gameObject.SetActive(false);
+               lives.GetComponent<lives>().lives_counter -= 1;
+               if (lives.GetComponent<lives>().lives_counter == 0) {
+                     end_pannel.SetActive(true);
+               }
          }
    }
 }
