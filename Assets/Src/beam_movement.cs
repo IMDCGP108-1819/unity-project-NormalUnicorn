@@ -15,6 +15,7 @@ public class beam_movement : MonoBehaviour {
           lives = GameObject.Find("Lives");
           RigidBody2D = this.GetComponent<Rigidbody2D>();
           score = GameObject.Find("score");
+          end_pannel = GameObject.Find("score_panel");
     }
 
     // Update is called once per frame
