@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4204904759611972832}
   m_Layer: 0
   m_Name: bob
-  m_TagString: goal
+  m_TagString: goal1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2353005262270720726}
   m_Layer: 0
   m_Name: fast pink bob
-  m_TagString: goal
+  m_TagString: goal3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

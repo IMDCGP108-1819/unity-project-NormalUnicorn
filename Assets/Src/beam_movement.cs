@@ -5,10 +5,12 @@ using UnityEngine;
 public class beam_movement : MonoBehaviour {
     public float movement_speed;
     public Rigidbody2D RigidBody2D;
+    public GameObject score;
     // Start is called before the first frame update
     void Start()
     {
           RigidBody2D = this.GetComponent<Rigidbody2D>();
+          score = GameObject.Find("score");
     }
 
     // Update is called once per frame
@@ -18,8 +20,18 @@ public class beam_movement : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-          if (other.gameObject.tag == "goal") {
-                Debug.Log("Hello there");
-          }
+          if (other.gameObject.tag == "goal1") {
+                other.gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
+                score.GetComponent<scoring>().score += 1;
+          } else if (other.gameObject.tag == "goal2") {
+                other.gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
+                score.GetComponent<scoring>().score += 3;
+         } else if (other.gameObject.tag == "goal3") {
+               other.gameObject.SetActive(false);
+               other.gameObject.SetActive(false);
+               score.GetComponent<scoring>().score += 5;
+         }
    }
 }
