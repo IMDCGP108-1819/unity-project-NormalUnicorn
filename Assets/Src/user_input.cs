@@ -24,6 +24,7 @@ public class user_input : MonoBehaviour {
 				StartTime = Time.time;
 			} else {
                  		// the bullet is set to inactive, so it vanishes.
+				// github chris
                  		fired_beam.SetActive(false);
 	     		}
        	}

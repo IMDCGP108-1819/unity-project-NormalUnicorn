@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f36105766a6dc4a99fa0e852d52680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pools: []
   size: {x: 0, y: 5, z: 0}
   is_left: 0
   tTimer: 0
@@ -173,7 +174,7 @@ GameObject:
   - component: {fileID: 483856938}
   - component: {fileID: 483856937}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PlayerControl
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -191,8 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d47d1c00a02e147b7e117049549920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fired_beam: {fileID: 8112516381241291305, guid: 8f15b7e8ecf06e242997a963f7bb48b3,
+  fired_beam_prefab: {fileID: 8112516381241291305, guid: 8f15b7e8ecf06e242997a963f7bb48b3,
     type: 3}
+  LifeTime: 0.52
 --- !u!4 &483856938
 Transform:
   m_ObjectHideFlags: 0
@@ -250,6 +252,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f36105766a6dc4a99fa0e852d52680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pools:
+  - tag: slow
+    prefab: {fileID: 1797102841212568, guid: 3f92021a9ccdddd479e980cbb9361c4c, type: 3}
+    size: 5
+  - tag: medium
+    prefab: {fileID: 1797102841212568, guid: 5dad4b7e1c664aa40a46cfe3b2011682, type: 3}
+    size: 5
+  - tag: fast
+    prefab: {fileID: 1797102841212568, guid: 89a3a7c34551250469b47d626fd9ab09, type: 3}
+    size: 5
   size: {x: 0, y: 5, z: 0}
   is_left: 1
   tTimer: 0
