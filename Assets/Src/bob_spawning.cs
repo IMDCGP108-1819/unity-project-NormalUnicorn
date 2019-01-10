@@ -20,8 +20,8 @@ public class bob_spawning : MonoBehaviour {
 		if (Time.time > tTimer) {
 			spawnArea();
 			tTimer = Time.time + Random.Range(1.0f,5.0f);
-		}
 
+		}
 	}
 	// https://youtu.be/kTvBRkPTvRY - used this video to help with this function
 	public void spawnArea() {
