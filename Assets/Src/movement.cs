@@ -7,27 +7,11 @@ public class movement : MonoBehaviour {
 	public bool direction;
 	public float StartTime;
 	public float LifeTime = 3.0f;
-
+	public int score; 
 	// Use this for initialization
 	void Start () {
 		StartTime = Time.time;
 	}
-
-	// private GameObject GetBullet() {
-      //   // loop from 0 to MaxBullets, adding 1 each time we complete a loop
-      //   for (int i = 0; i < MaxBob; i++) {
-      //       // if the bullet in bulletList at position i is not active in the scene
-      //       if (!bulletList[i].activeSelf) {
-      //           // then return it.
-      //           // returning will stop any further checks against other bullets
-      //           return bulletList[i];
-      //       }
-      //   }
-	//
-      //   // if we reach here, there are no available bullets and we cannot fire.
-      //   return null;
-	// }
-
 
 	// Update is called once per frame
 	void Update () {
